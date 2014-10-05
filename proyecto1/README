@@ -37,12 +37,24 @@ donde:
 
 
 
- Por ultimo tenemos el ejecutable del adaline que se ejecuta de la siguiente manera:
+ Tambien tenemos el ejecutable del adaline que se ejecuta de la siguiente manera:
 
 	./adaline <tasa_de_aprendizaje> <archivo_de_casos> <numero_de_entradas_del_perceptron> <valor_inicial_vector_pesos>
 
 donde cada parametro es similar a los del perceptron
 
+ 
+
+ El comando usado para hacer las graficas es gnuplot, y se usa de la siguiente manera:
+
+	ejecute el comando: gnuplot
+	Luego se abre un prompt de gnuplot y ejecute:
+
+	plot "<filename>" using 1:2 with lines title "titulo_del_grafico"
+	set term png
+	set output "<nombre_archivo_salida>.png"
+	replot
+ 
 
 NOTA: el maximo de iteraciones se dejo como 20, ya que se descubrio con los experimentos
 que es un numero razonable para el que convergen las soluciones, si estas convergen.
