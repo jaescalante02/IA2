@@ -20,7 +20,7 @@ double taza;
 int n;
 
 
-const int max_iter = 10000;
+const int max_iter = 20;
 
 vector<int> respuestas;
 //vector que representa un caso dado por el archivo de casos
@@ -61,7 +61,7 @@ int main(int argc, char *args[]){
   n = atoi(args[3]);
   
   //vector de pesos
-  mi_vector vec(vector<double> (n+1,100));
+  mi_vector vec(vector<double> (n+1,0.0));
   
   //vector de diferencial
   n_casos++;
@@ -84,9 +84,9 @@ int main(int argc, char *args[]){
         
         //calculo el diferencial que hay que sumarle al vector de pesos actual
         for(int k=0;k<n+1;k++) 
-          diff.ws[k]+=taza*(t-o)*casos[j][k];
+          diff.ws[k]+=(taza)*(t-o)*casos[j][k];
       }
-	  cout << "\nvec = (";
+/*	  cout << "\nvec = (";
 	  for(int k=0;k<vec.ws.size();k++){
 		  cout << vec.ws[k] << ", ";
 	  }
@@ -97,14 +97,15 @@ int main(int argc, char *args[]){
 		  cout << diff.ws[k] << ", ";
 	  }
 	  cout <<")"<< endl;
-
+*/
       vec = vec + diff;
-      fprintf(out,"iteracion %d, error = %lf\n",i,error_total*1./2/casos.size());
+//	  imprimo el numero de iteracion y el error en el archivo
+      fprintf(out,"%d %lf\n",i,error_total*1./2/casos.size());
 //      for(int k=0;k<n+1;k++) cout << diff.ws[k] << " ";
  //     cout << endl;
       //si ya no hay error para ningun caso, quiere decir que ya la neurona 
       //esta entrenada
-	  cout << "error =" << (error_total/2)/casos.size() << endl;
+//	  cout << "error =" << (error_total/2)/casos.size() << endl;
 //      if(error_total/casos.size()<1.01)
   //      break;
   }

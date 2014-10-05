@@ -19,7 +19,7 @@ double taza;
 int n;
 
 
-const int max_iter = 1000;
+const int max_iter = 20;
 
 vector<int> respuestas;
 
@@ -61,10 +61,10 @@ int main(int argc, char *args[]){
   n = atoi(args[3]);
   
   //vector de pesos
-  mi_vector vec(vector<double> (n+1,0.1));
+  mi_vector vec(vector<double> (n+1,-3));
   
   //vector de diferencial
-  mi_vector diff(vector<double> (n+1,0.1));
+  mi_vector diff(vector<double> (n+1,0.0));
   n_casos++;
   
   cnt = 0;
@@ -85,12 +85,12 @@ int main(int argc, char *args[]){
         vec = vec + diff;
       }
       
-      fprintf(out,"iteracion %d, error = %lf\n",i,error_total*1./casos.size());
+      fprintf(out,"%d %lf\n",i,error_total*1./casos.size());
       
       //si ya no hay error para ningun caso, quiere decir que ya la neurona 
       //esta entrenada
-      if(!error_total)
-        break;
+//      if(!error_total)
+  //      break;
   }
     
   
