@@ -75,7 +75,7 @@ int main(int argc, char *args[]){
       int error_total = 0;
       for(int j=0;j<casos.size();j++){
         //calculo como evalua la neurona esta iteracion en este caso
-//        for(int k=0;k<vec.ws.size();k++) cout << vec.ws[k] << endl;
+
         int o = ((vec.mult(casos[j])>0.0)?1:-1);
         //valor objetivo
         int t = respuestas[j];
@@ -87,11 +87,7 @@ int main(int argc, char *args[]){
       }
       
       fprintf(out,"%d %lf\n",i,error_total*1./casos.size());
-      
-      //si ya no hay error para ningun caso, quiere decir que ya la neurona 
-      //esta entrenada
-//      if(!error_total)
-  //      break;
+
   }
     
   

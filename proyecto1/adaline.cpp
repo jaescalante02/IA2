@@ -84,7 +84,7 @@ int main(int argc, char *args[]){
         
         //valor objetivo
         double t = (double)respuestas[j];
-     //  	cout << t << " " << o << endl; 
+
         error_total+=(t-o)*(t-o);
         
         //calculo el diferencial que hay que sumarle al vector de pesos actual
@@ -95,13 +95,7 @@ int main(int argc, char *args[]){
       vec = vec + diff;
 //	  imprimo el numero de iteracion y el error en el archivo
       fprintf(out,"%d %lf\n",i,error_total*1./2/casos.size());
-//      for(int k=0;k<n+1;k++) cout << diff.ws[k] << " ";
- //     cout << endl;
-      //si ya no hay error para ningun caso, quiere decir que ya la neurona 
-      //esta entrenada
-//	  cout << "error =" << (error_total/2)/casos.size() << endl;
-//      if(error_total/casos.size()<1.01)
-  //      break;
+
   }
     
   
