@@ -39,9 +39,11 @@ donde:
 
  Tambien tenemos el ejecutable del adaline que se ejecuta de la siguiente manera:
 
-	./adaline <tasa_de_aprendizaje> <archivo_de_casos> <numero_de_entradas_del_perceptron> <valor_inicial_vector_pesos>
+	./adaline <tasa_de_aprendizaje> <archivo_de_casos> <numero_de_entradas_del_perceptron> <valor_inicial_vector_pesos> <modo_decremental>
 
 donde cada parametro es similar a los del perceptron
+*el <modo_decremental>: indica si se quiere que la tasa de aprendizaje disminuya por iteracion como se pidio en el proyecto, y debe ser
+1 para modo_decremental o 0 para que no haya decremento de la tasa
 
  
 

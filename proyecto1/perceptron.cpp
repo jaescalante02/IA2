@@ -12,8 +12,8 @@ FILE *arch;
 //Descriptor del archivo de salida
 FILE *out;
 
-//taza deaprendizaje dada por el usuario 
-double taza;
+//tasa deaprendizaje dada por el usuario 
+double tasa;
 
 //Representa el numero de entradas de la neurona, dada por el usuario
 int n;
@@ -55,7 +55,7 @@ int main(int argc, char *args[]){
           <<"<numero_de_entradas_del_perceptron> <valor_inicial_vector_pesos>"<<endl;
     return 0;
   }
-  taza = strtod(args[1],NULL);
+  tasa = strtod(args[1],NULL);
   arch = fopen(args[2],"r");
   out = fopen("perceptron.out","w"); 
   n = atoi(args[3]);
@@ -82,7 +82,7 @@ int main(int argc, char *args[]){
         error_total+=abs(t-o)*abs(t-o);
         
         //calculo el diferencial que hay que sumarle al vector de pesos actual
-        for(int k=0;k<n+1;k++) {diff.ws[k]=taza*(t-o)*casos[j][k];}
+        for(int k=0;k<n+1;k++) {diff.ws[k]=tasa*(t-o)*casos[j][k];}
         vec = vec + diff;
       }
       

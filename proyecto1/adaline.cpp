@@ -13,8 +13,8 @@ FILE *arch;
 //Descriptor del archivo de salida
 FILE *out;
 
-//taza deaprendizaje dada por el usuario 
-double taza;
+//tasa deaprendizaje dada por el usuario 
+double tasa;
 
 //Representa el numero de entradas de la neurona, dada por el usuario
 int n;
@@ -50,17 +50,19 @@ int n_casos;
 
 int main(int argc, char *args[]){
   //Los parametros pasados como argumento deben ser
-  if(argc!=5){
+  if(argc!=6){
     cout<<"Uso:\n./adaline <tasa_de_aprendizaje> <archivo_de_casos> " \
-        <<"<numero_de_entradas_del_adaline> <valor_inicial_vector_de_pesos>"<<endl;
+        <<"<numero_de_entradas_del_adaline> <valor_inicial_vector_de_pesos>" \
+		<< " <modo_decremental>"<<endl;
     return 0;
   }
-  taza = strtod(args[1],NULL);
+  tasa = strtod(args[1],NULL);
   arch = fopen(args[2],"r");
   out = fopen("adaline.out","w"); 
   n = atoi(args[3]);
   double inic = strtod(args[4],NULL);
-
+  int modo = atoi(args[5]);
+  double tasa_inicial = tasa;
   //vector de pesos
   mi_vector vec(vector<double> (n+1,inic));
   
@@ -74,6 +76,8 @@ int main(int argc, char *args[]){
   for(int i=0;i<max_iter;i++){
       double error_total = 0.0;
       mi_vector diff(vector<double> (n+1,0.0));
+      if(modo) 
+	 tasa = tasa_inicial/(i+1);
       for(int j=0;j<casos.size();j++){
         //calculo como evalua la neurona esta iteracion en este caso
         double o = vec.mult(casos[j]);
@@ -85,20 +89,9 @@ int main(int argc, char *args[]){
         
         //calculo el diferencial que hay que sumarle al vector de pesos actual
         for(int k=0;k<n+1;k++) 
-          diff.ws[k]+=(taza)*(t-o)*casos[j][k];
+          diff.ws[k]+=(tasa)*(t-o)*casos[j][k];
       }
-/*	  cout << "\nvec = (";
-	  for(int k=0;k<vec.ws.size();k++){
-		  cout << vec.ws[k] << ", ";
-	  }
-	  cout <<")"<< endl;
 
-	  cout << "\ndiff = (";
-	  for(int k=0;k<diff.ws.size();k++){
-		  cout << diff.ws[k] << ", ";
-	  }
-	  cout <<")"<< endl;
-*/
       vec = vec + diff;
 //	  imprimo el numero de iteracion y el error en el archivo
       fprintf(out,"%d %lf\n",i,error_total*1./2/casos.size());
