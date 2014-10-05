@@ -50,18 +50,19 @@ int n_casos;
 
 int main(int argc, char *args[]){
   //Los parametros pasados como argumento deben ser
-  if(argc!=4){
-    cout<<"Uso:\n./adaline <taza_de_aprendizaje> <archivo_de_casos> " \
-                              <<"<numero_de_entradas_del_adaline>"<<endl;
+  if(argc!=5){
+    cout<<"Uso:\n./adaline <tasa_de_aprendizaje> <archivo_de_casos> " \
+        <<"<numero_de_entradas_del_adaline> <valor_inicial_vector_de_pesos>"<<endl;
     return 0;
   }
   taza = strtod(args[1],NULL);
   arch = fopen(args[2],"r");
   out = fopen("adaline.out","w"); 
   n = atoi(args[3]);
-  
+  double inic = strtod(args[4],NULL);
+
   //vector de pesos
-  mi_vector vec(vector<double> (n+1,0.0));
+  mi_vector vec(vector<double> (n+1,inic));
   
   //vector de diferencial
   n_casos++;
