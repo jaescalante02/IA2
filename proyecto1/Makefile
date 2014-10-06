@@ -9,6 +9,6 @@ mivector.o: mivector.h mivector.cpp
 clean:
 	rm -rf *.o *.out
 	rm -rf *~
-	rm perceptron
-	rm generador
-	rm adaline
+	rm -rf perceptron
+	rm -rf generador
+	rm -rf adaline
