@@ -1,0 +1,62 @@
+Proyecto hecho por:
+
+Wilmer Bandres 10-10055
+Juan Escalante 10-10227
+
+El modo de uso de cada uno de los ejecutables se presentan a continuacion:
+
+Para compilar todo simplemente haga el comando:
+
+	make
+
+
+Existe un generador de casos que se ejecuta de la siguiente manera:
+
+	./generador <tipo_operacion> <tamanio_entrada_neurona>
+
+donde <tipo_operacion> debe ser 1 para OR, 2 para AND y cualquier otro numero para XOR
+y el tamanio_entrada_neurona es un numero que indica cuantas entradas tiene la 
+neurona y genera toda las entradas posibles para el conjunto de entrenamiento
+ para esa cantidad de entradas, es decir que si este numero es 2, 
+ se generaran 2^2 casos de entrenamientos. Estos casos quedan en un archivo llamado
+ out_generador
+
+
+ Luego tenemos el ejecutable del perceptron que se ejecuta de la siguiente manera:
+
+	./perceptron <tasa_de_aprendizaje> <archivo_de_casos> <numero_de_entradas_del_perceptron> <valor_inicial_vector_pesos>
+
+donde:
+
+ *la <tasa_de_aprendizaje> es la tasa de aprendizaje con la que se quiere ejecutar el entrenamiento
+ *el <archivo_de_casos> es el archivo donde esta el input (el conjunto de entrenamiento)
+ *el <numero_de_entradas del perceptron> es el numero de entradas que tiene la neurona y que debe coincidir
+ con el numero de entradas con el que estan hecho los casos del archivo de casos
+ *el <valor_inicial_vector_pesos> es el valor que va a tener cada componente
+ del vector de pesos inicialmente
+
+
+
+ Tambien tenemos el ejecutable del adaline que se ejecuta de la siguiente manera:
+
+	./adaline <tasa_de_aprendizaje> <archivo_de_casos> <numero_de_entradas_del_perceptron> <valor_inicial_vector_pesos> <modo_decremental>
+
+donde cada parametro es similar a los del perceptron
+*el <modo_decremental>: indica si se quiere que la tasa de aprendizaje disminuya por iteracion como se pidio en el proyecto, y debe ser
+1 para modo_decremental o 0 para que no haya decremento de la tasa
+
+ 
+
+ El comando usado para hacer las graficas es gnuplot, y se usa de la siguiente manera:
+
+	ejecute el comando: gnuplot
+	Luego se abre un prompt de gnuplot y ejecute:
+
+	plot "<filename>" using 1:2 with lines title "titulo_del_grafico"
+	set term png
+	set output "<nombre_archivo_salida>.png"
+	replot
+ 
+
+NOTA: el maximo de iteraciones se dejo como 20, ya que se descubrio con los experimentos
+que es un numero razonable para el que convergen las soluciones, si estas convergen.
