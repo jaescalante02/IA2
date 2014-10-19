@@ -26,7 +26,7 @@ int n;
 //Representa el numero de neuronas en la capa intermedia
 int neuronas;
 
-const int max_iter = 1000;
+const int max_iter = 50000;
 
 vector<int> respuestas;
 //vector que representa un caso dado por el archivo de casos
