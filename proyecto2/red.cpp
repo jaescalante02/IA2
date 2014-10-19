@@ -62,7 +62,8 @@ void leer2(){
       caso_prueba[0]=1.0;
       // termino de leer los numeros de este caso
       for(int i =0;i<n-1;i++) fscanf(pruebas,"%lf",&caso_prueba[i+2]);
-	    
+	   // for(int i=0;i<3;i++) cout << caso_prueba[i]<< " ";
+	    //cout << endl;
       casos_prueba.push_back(caso_prueba);
     }
 }
