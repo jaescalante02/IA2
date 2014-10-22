@@ -73,4 +73,3 @@ circulo, se ejecuta de la siguiente manera
     Los parametros son similares al caso anterior
     En este caso el <numero_de_entradas_por_neurona_de_capa_intemedia> debe ser 4,
     ya que cada iris posee 4 caracteristicas
-    

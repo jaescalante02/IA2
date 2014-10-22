@@ -23,6 +23,12 @@ double tasa;
 //Representa el numero de entradas por neurona de capa intermedia, dada por el usuario
 int n;
 
+//vectores de pesos de las neurona de la capa de output
+mi_vector vec,vec2,vec3;
+
+//vectores de pesos de las neuronas de la capa intermedia
+vector<mi_vector> intermedias; 
+
 //Representa el numero de neuronas en la capa intermedia
 int neuronas;
 
@@ -78,61 +84,17 @@ void leer2(){
     }
 }
 
-//contador del numero de iteraciones
-int cnt;
-
-
-int main(int argc, char *args[]){
-  //Los parametros pasados como argumento deben ser
-  if(argc!=8){
-    cout<<"Uso:\n./red <tasa_de_aprendizaje> <archivo_de_casos> " \
-        <<"<numero_de_neuronas_de_capa_intermedia> "\
-        <<"<numero_de_entradas_por_neurona_de_capa_intermedia> " \
-        <<"<archivo_de_salida_errores> <archivo_de_pruebas_a_clasificar> " \
-        <<"<archivo_de_salida_clasificado> "<< endl;
-    return 0;
-  }
-  tasa = strtod(args[1],NULL);
-  arch = fopen(args[2],"r");
-  out = fopen(args[5],"w"); 
-  n = atoi(args[4]);
-  neuronas = atoi(args[3]); 
-  if(args[6][0]!='0'){
-    pruebas=fopen(args[6],"r");
-    salida_pruebas=fopen(args[7],"w");
-  }
-  
-  double tasa_inicial = tasa;
-  
-  //vectores de pesos de las neurona de la capa de output
-  mi_vector vec,vec2,vec3;
-  
-  srand(time(NULL));
-  
-  //vectores de pesos de las neuronas de la capa intermedia
-  vector<mi_vector> intermedias;
-  for(int i=0;i<neuronas;i++){
-    vec.ws.push_back((rand()%100)/100000.0);
-    vec2.ws.push_back((rand()%100)/100000.0);
-    vec3.ws.push_back((rand()%100)/100000.0);        
-    
-    intermedias.push_back(mi_vector());
-    for(int j=0;j<n+1;j++)
-      intermedias[i].ws.push_back((rand()%100)/100000.0);
-  }
-  
-  cnt = 0;
-  leer();
-  
-  
-  
-  for(int i=0;i<max_iter;i++){
-      double error_total = 0.0;
-      
-      for(int j=0;j<casos.size();j++){
-         vector<double> outs;
+vector<double> feed_forward(int j){
+         vector<double> miout;
       
          for(int k=0;k<neuronas;k++){
+            miout.push_back(sigmoidal(intermedias[k].mult(casos[j])));
+         }
+         return miout;
+}
+
+double back_propagation(int j, vector<double> &outs){
+ for(int k=0;k<neuronas;k++){
             outs.push_back(sigmoidal(intermedias[k].mult(casos[j])));
          }          
         
@@ -190,7 +152,62 @@ int main(int argc, char *args[]){
           }
           
   
-          error_total+=(t-o)*(t-o)+(t2-o2)*(t2-o2)+(t3-o3)*(t3-o3);
+          return (t-o)*(t-o)+(t2-o2)*(t2-o2)+(t3-o3)*(t3-o3);
+}
+
+
+
+
+int main(int argc, char *args[]){
+  //Los parametros pasados como argumento deben ser
+  if(argc!=8){
+    cout<<"Uso:\n./red <tasa_de_aprendizaje> <archivo_de_casos> " \
+        <<"<numero_de_neuronas_de_capa_intermedia> "\
+        <<"<numero_de_entradas_por_neurona_de_capa_intermedia> " \
+        <<"<archivo_de_salida_errores> <archivo_de_pruebas_a_clasificar> " \
+        <<"<archivo_de_salida_clasificado> "<< endl;
+    return 0;
+  }
+  tasa = strtod(args[1],NULL);
+  arch = fopen(args[2],"r");
+  out = fopen(args[5],"w"); 
+  n = atoi(args[4]);
+  neuronas = atoi(args[3]); 
+  if(args[6][0]!='0'){
+    pruebas=fopen(args[6],"r");
+    salida_pruebas=fopen(args[7],"w");
+  }
+  
+  double tasa_inicial = tasa;
+  
+ 
+  srand(time(NULL));
+  
+ 
+  for(int i=0;i<neuronas;i++){
+    vec.ws.push_back((rand()%100)/100000.0);
+    vec2.ws.push_back((rand()%100)/100000.0);
+    vec3.ws.push_back((rand()%100)/100000.0);        
+    
+    intermedias.push_back(mi_vector());
+    for(int j=0;j<n+1;j++)
+      intermedias[i].ws.push_back((rand()%100)/100000.0);
+  }
+  
+
+  leer();
+  
+  
+  
+  for(int i=0;i<max_iter;i++){
+      double error_total = 0.0;
+      
+      for(int j=0;j<casos.size();j++){
+         
+         vector<double> outs=feed_forward(j);
+          
+         error_total+=back_propagation(j,outs);
+
       }
       
       if(error_total<0.001) break;
