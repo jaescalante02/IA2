@@ -220,7 +220,11 @@ int main(int argc, char *args[]){
 
 		  if(o2>o) resp=2;
 		  else resp=1;
-          fprintf(salida_pruebas,"%d\n",resp);
+		  if(resp==1)
+	          fprintf(salida_pruebas,"Iris setosa\n");
+		  else
+			  fprintf(salida_pruebas,"No es iris setosa\n");
+
     }
 
     fclose(pruebas);

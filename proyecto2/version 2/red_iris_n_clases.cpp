@@ -234,7 +234,14 @@ int main(int argc, char *args[]){
 		  if(o3>o2 && o3 >o) resp = 3;
 		  else if(o2>o && o2>o3) resp=2;
 		  else resp=1;
-          fprintf(salida_pruebas,"%d\n",resp);
+		  if(resp==1)
+	          fprintf(salida_pruebas,"Iris setosa\n");
+		  else if(resp==2)
+			  fprintf(salida_pruebas,"Iris versicolor\n");
+	      else
+			  fprintf(salida_pruebas,"Iris virginica\n");
+
+
     }
 
     fclose(pruebas);
