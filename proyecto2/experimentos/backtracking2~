@@ -15,9 +15,9 @@ do
 #c2
 #c3
 
-echo "../v2/red 0.1 ../inputs_iris/$c2.txt $c3 4 salida.txt ../inputs_iris/conjunto_a_clasificar.txt clasificado_setosa_0.1_$c2\_$c3.out"
+echo "../v2/red_iris 0.1 ../inputs_iris/$c2.txt $c3 4 salida_setosa__$c2\_$c3.txt.txt ../inputs_iris/conjunto_a_clasificar.txt clasificado_setosa_0.1_$c2\_$c3.out"
 
-../v2/red 0.1 ../inputs_iris/$c2.txt $c3 4 salida.txt ../inputs_iris/conjunto_a_clasificar.txt clasificado_setosa_0.1_$c2\_$c3.out
+../v2/red_iris 0.1 ../inputs_iris/$c2.txt $c3 4 salida_setosa_$c2\_$c3.txt ../inputs_iris/conjunto_a_clasificar.txt clasificado_setosa_0.1_$c2\_$c3.out
 
 
 
