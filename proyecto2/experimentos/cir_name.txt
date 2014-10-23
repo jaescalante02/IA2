@@ -1,0 +1,6 @@
+datos_P1_2_SD2014_n500
+datos_P1_2_SD2014_n1000
+datos_P1_2_SD2014_n2000
+datos_random_n500_s20
+datos_random_n1000_s30
+datos_random_n2000_s40

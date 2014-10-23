@@ -1,0 +1,28 @@
+#! /bin/bash
+
+
+#while read c1
+#do
+
+while read c2
+do
+
+
+while read c3
+do
+
+#c1
+#c2
+#c3
+
+echo "../v2/red 0.1 ../inputs/$c2.txt $c3 2 salida.txt ../inputs/rejilla_a_clasificar.txt clasificado_0.1_$c2\_$c3.out"
+
+../v2/red 0.1 ../inputs/$c2.txt $c3 2 salida.txt ../inputs/rejilla_a_clasificar.txt clasificado_0.1_$c2\_$c3.out
+
+
+
+done < $2 #cir_neuronas.txt
+
+done < $1 #cir_name.txt
+
+#done < $1

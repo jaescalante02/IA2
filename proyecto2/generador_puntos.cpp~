@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
 				
   output->close();
 
-  output = new ofstream("inputs/rejilla.txt");  
+  output = new ofstream("rejilla.txt");  
   float x =0.1;
   for(int i =0;i<100;++i){
   
