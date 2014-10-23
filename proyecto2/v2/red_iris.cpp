@@ -173,13 +173,13 @@ int main(int argc, char *args[]){
   
 
   for(int i=0;i<neuronas;i++){
-    vec.ws.push_back((rand()%100)/100000.0);
-    vec2.ws.push_back((rand()%100)/100000.0);
+    vec.ws.push_back(((rand()%100)-50)/100.0);
+    vec2.ws.push_back(((rand()%100)-50)/100.0);
   
     
     intermedias.push_back(mi_vector());
     for(int j=0;j<n+1;j++)
-      intermedias[i].ws.push_back((rand()%100)/100000.0);
+      intermedias[i].ws.push_back(((rand()%100)-50)/100.0);
   }
   
 
