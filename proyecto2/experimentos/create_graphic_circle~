@@ -1,20 +1,23 @@
 #! /bin/bash
 
+echo $2
 echo "Paso 1"
 paste $1 $2 > union.txt
 echo "Paso 2"
-head -5000 union.txt > B.txt
+head -3852 union.txt > B.txt
 echo "Paso 3"
-tail -5000 union.txt > A.txt
+tail -6148 union.txt > A.txt
 echo "Paso 4"
 grep -v -e -1 A.txt > Agood.txt
 wc -l Agood.txt
 grep -e -1 A.txt > Abad.txt
 wc -l Abad.txt
+AB=`wc -l Abad.txt | awk '{print $1}'`
 grep -e -1 B.txt > Bgood.txt
 wc -l Bgood.txt
 grep -v -e -1 B.txt > Bbad.txt
 wc -l Bbad.txt
+BB=`wc -l Bbad.txt | awk '{print $1}'`
 gnuplot graphics_creator.gnuplot
-
+echo "TOTAL $[$AB+$BB] $[$BB+$AB]"
 rm union.txt A.txt B.txt Agood.txt Abad.txt Bbad.txt Bgood.txt

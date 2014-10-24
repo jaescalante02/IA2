@@ -1,0 +1,14 @@
+#! /bin/bash
+
+ls circulo > results.txt
+
+while read line
+do
+
+./create_graphic_circle  ../inputs/rejilla_a_clasificar.txt circulo/$line
+mv p.png circulo/$line.png
+
+
+done < results.txt
+
+rm results.txt

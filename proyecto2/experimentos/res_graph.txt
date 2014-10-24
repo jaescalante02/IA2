@@ -1,0 +1,540 @@
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_10.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5901 Agood.txt
+247 Abad.txt
+3676 Bgood.txt
+176 Bbad.txt
+TOTAL 423
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_2.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+3921 Agood.txt
+2227 Abad.txt
+3233 Bgood.txt
+619 Bbad.txt
+TOTAL 2846
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_3.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5010 Agood.txt
+1138 Abad.txt
+1639 Bgood.txt
+2213 Bbad.txt
+TOTAL 3351
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_4.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+4893 Agood.txt
+1255 Abad.txt
+3544 Bgood.txt
+308 Bbad.txt
+TOTAL 1563
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_5.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5762 Agood.txt
+386 Abad.txt
+3105 Bgood.txt
+747 Bbad.txt
+TOTAL 1133
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_6.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5838 Agood.txt
+310 Abad.txt
+3349 Bgood.txt
+503 Bbad.txt
+TOTAL 813
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_7.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5988 Agood.txt
+160 Abad.txt
+3676 Bgood.txt
+176 Bbad.txt
+TOTAL 336
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_8.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5937 Agood.txt
+211 Abad.txt
+3318 Bgood.txt
+534 Bbad.txt
+TOTAL 745
+circulo/clasificado_0.1_datos_P1_2_SD2014_n1000_9.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5811 Agood.txt
+337 Abad.txt
+3735 Bgood.txt
+117 Bbad.txt
+TOTAL 454
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_10.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6081 Agood.txt
+67 Abad.txt
+3611 Bgood.txt
+241 Bbad.txt
+TOTAL 308
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_2.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_3.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+3381 Agood.txt
+2767 Abad.txt
+3727 Bgood.txt
+125 Bbad.txt
+TOTAL 2892
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_4.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5294 Agood.txt
+854 Abad.txt
+3281 Bgood.txt
+571 Bbad.txt
+TOTAL 1425
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_5.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+1132 Bgood.txt
+2720 Bbad.txt
+TOTAL 2720
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_6.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+752 Bgood.txt
+3100 Bbad.txt
+TOTAL 3100
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_7.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5887 Agood.txt
+261 Abad.txt
+3579 Bgood.txt
+273 Bbad.txt
+TOTAL 534
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_8.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5769 Agood.txt
+379 Abad.txt
+3738 Bgood.txt
+114 Bbad.txt
+TOTAL 493
+circulo/clasificado_0.1_datos_P1_2_SD2014_n2000_9.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5789 Agood.txt
+359 Abad.txt
+3488 Bgood.txt
+364 Bbad.txt
+TOTAL 723
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_10.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5855 Agood.txt
+293 Abad.txt
+3727 Bgood.txt
+125 Bbad.txt
+TOTAL 418
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_2.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_3.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5071 Agood.txt
+1077 Abad.txt
+1472 Bgood.txt
+2380 Bbad.txt
+TOTAL 3457
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_4.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5977 Agood.txt
+171 Abad.txt
+573 Bgood.txt
+3279 Bbad.txt
+TOTAL 3450
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_5.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5837 Agood.txt
+311 Abad.txt
+3195 Bgood.txt
+657 Bbad.txt
+TOTAL 968
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_6.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5853 Agood.txt
+295 Abad.txt
+3183 Bgood.txt
+669 Bbad.txt
+TOTAL 964
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_7.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+4997 Agood.txt
+1151 Abad.txt
+3787 Bgood.txt
+65 Bbad.txt
+TOTAL 1216
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_8.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5956 Agood.txt
+192 Abad.txt
+3503 Bgood.txt
+349 Bbad.txt
+TOTAL 541
+circulo/clasificado_0.1_datos_P1_2_SD2014_n500_9.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6055 Agood.txt
+93 Abad.txt
+3266 Bgood.txt
+586 Bbad.txt
+TOTAL 679
+circulo/clasificado_0.1_datos_random_n1000_s30_10.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n1000_s30_2.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6147 Agood.txt
+1 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3853
+circulo/clasificado_0.1_datos_random_n1000_s30_3.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6147 Agood.txt
+1 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3853
+circulo/clasificado_0.1_datos_random_n1000_s30_4.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6147 Agood.txt
+1 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3853
+circulo/clasificado_0.1_datos_random_n1000_s30_5.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n1000_s30_6.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n1000_s30_7.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6147 Agood.txt
+1 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3853
+circulo/clasificado_0.1_datos_random_n1000_s30_8.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n1000_s30_9.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_10.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_2.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_3.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_4.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_5.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_6.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_7.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_8.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n2000_s40_9.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n500_s20_10.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5981 Agood.txt
+167 Abad.txt
+2767 Bgood.txt
+1085 Bbad.txt
+TOTAL 1252
+circulo/clasificado_0.1_datos_random_n500_s20_2.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n500_s20_3.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n500_s20_4.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n500_s20_5.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n500_s20_6.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5980 Agood.txt
+168 Abad.txt
+2366 Bgood.txt
+1486 Bbad.txt
+TOTAL 1654
+circulo/clasificado_0.1_datos_random_n500_s20_7.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5748 Agood.txt
+400 Abad.txt
+3109 Bgood.txt
+743 Bbad.txt
+TOTAL 1143
+circulo/clasificado_0.1_datos_random_n500_s20_8.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+6148 Agood.txt
+0 Abad.txt
+0 Bgood.txt
+3852 Bbad.txt
+TOTAL 3852
+circulo/clasificado_0.1_datos_random_n500_s20_9.out
+Paso 1
+Paso 2
+Paso 3
+Paso 4
+5964 Agood.txt
+184 Abad.txt
+2576 Bgood.txt
+1276 Bbad.txt
+TOTAL 1460
