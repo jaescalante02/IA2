@@ -1,0 +1,24 @@
+#! /bin/bash
+
+#! /bin/bash
+
+ls divisor_de_iris/clasificado* > tmp_clasif.txt
+
+
+while read line
+do
+
+head -50 $line > tmp_setosa.txt
+head -100 $line | tail -50 > tmp_versicolor.txt
+tail -50 $line > tmp_virginica.txt
+
+A=`grep -v setosa tmp_setosa.txt | wc -l | awk '{print $1}'`
+B=`grep -v versicolor tmp_versicolor.txt | wc -l | awk '{print $1}'`
+C=`grep -v virginica tmp_virginica.txt | wc -l | awk '{print $1}'`
+echo $line
+echo "ERRORES $[$A+$B+$C]"
+
+
+done < tmp_clasif.txt
+
+rm -rf tmp_setosa.txt tmp_virginica.txt tmp_versicolor.txt tmp_clasif.txt

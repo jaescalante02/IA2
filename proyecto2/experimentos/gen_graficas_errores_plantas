@@ -1,0 +1,15 @@
+#! /bin/bash
+
+ls divisor_de_iris/errores* > tmp_errores.txt
+
+
+while read line
+do
+
+cp $line a.txt 
+gnuplot errores_plantas.gnuplot
+mv p.png $line.png
+
+done < tmp_errores.txt
+
+rm -rf tmp_errores.txt

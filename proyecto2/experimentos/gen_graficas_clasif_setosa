@@ -1,0 +1,21 @@
+#! /bin/bash
+
+ls setosa/clasificado* > tmp_clasif.txt
+
+
+while read line
+do
+
+head -50 $line > tmp_setosa.txt
+tail -100 $line > tmp_nosetosa.txt
+
+A=`grep No tmp_setosa.txt | wc -l | awk '{print $1}'`
+B=`grep -v No tmp_nosetosa.txt | wc -l | awk '{print $1}'`
+
+echo $line
+echo "ERRORES $[$A+$B]"
+
+
+done < tmp_clasif.txt
+
+rm -rf tmp_setosa.txt tmp_nosetosa.txt tmp_clasif.txt

@@ -1,0 +1,70 @@
+divisor_de_iris/clasificado_plantas_0.1_input_50_10.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_50_4.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_50_5.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_50_6.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_50_7.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_50_8.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_50_9.out
+ERRORES 5
+divisor_de_iris/clasificado_plantas_0.1_input_60_10.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_60_4.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_60_5.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_60_6.out
+ERRORES 3
+divisor_de_iris/clasificado_plantas_0.1_input_60_7.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_60_8.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_60_9.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_70_10.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_70_4.out
+ERRORES 4
+divisor_de_iris/clasificado_plantas_0.1_input_70_5.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_70_6.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_70_7.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_70_8.out
+ERRORES 4
+divisor_de_iris/clasificado_plantas_0.1_input_70_9.out
+ERRORES 4
+divisor_de_iris/clasificado_plantas_0.1_input_80_10.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_80_4.out
+ERRORES 4
+divisor_de_iris/clasificado_plantas_0.1_input_80_5.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_80_6.out
+ERRORES 3
+divisor_de_iris/clasificado_plantas_0.1_input_80_7.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_80_8.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_80_9.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_90_10.out
+ERRORES 2
+divisor_de_iris/clasificado_plantas_0.1_input_90_4.out
+ERRORES 4
+divisor_de_iris/clasificado_plantas_0.1_input_90_5.out
+ERRORES 3
+divisor_de_iris/clasificado_plantas_0.1_input_90_6.out
+ERRORES 3
+divisor_de_iris/clasificado_plantas_0.1_input_90_7.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_90_8.out
+ERRORES 1
+divisor_de_iris/clasificado_plantas_0.1_input_90_9.out
+ERRORES 3
