@@ -61,7 +61,7 @@ def campo5(nombre):
   return 3
   
   
-def main():
+def procesar():
   if(len(sys.argv) != 2):
     print "Uso:"
     print "./procesador.py <archivo_de_datos_de_iris>"
@@ -79,4 +79,4 @@ def main():
 
   return datos
   
-print main()
+print procesar()
