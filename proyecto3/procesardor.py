@@ -64,7 +64,7 @@ def campo5(nombre):
 def procesar():
   if(len(sys.argv) != 2):
     print "Uso:"
-    print "./procesador.py <archivo_de_datos_de_iris>"
+    print "./main.py <archivo_de_datos_de_iris>"
     exit(0)
 
   entrada = open(sys.argv[1],'r')

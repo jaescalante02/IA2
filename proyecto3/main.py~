@@ -14,7 +14,7 @@ genome.crossover.set(operaciones.CrossoverDeGabil)
 # Genetic Algorithm Instance
 ga = GSimpleGA.GSimpleGA(genome)
 ga.selector.set(Selectors.GRouletteWheel)
-ga.nGenerations = 10
+ga.nGenerations = 100
 
 # Do the evolution
 ga.evolve(10)

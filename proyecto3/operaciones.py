@@ -7,28 +7,29 @@ from random import randint as rand_randint, gauss as rand_gauss, uniform as rand
 import pyevolve.Consts
 import pyevolve.Util
 import MiConstantes
-import procesardor
+import procesador
 
 #Funcion encargada de realizar el swap de alguno de los bits
 #De la representacion de un individuo
 #Cambia unicamente un bit
 def MutacionDeGabil(genome, **args):
   which = rand_randint(1, len(genome)-1)
-  mutations = args["pmut"] * (stringLength)
+  mutations = args["pmut"] * (len(genome))
+  
   if args["pmut"] <= 0.0: 
     return 0
     
   if mutations < 1.0:
     mutations=0
     if pyevolve.Util.randomFlipCoin(args["pmut"]):
-      if genome[which] == 0: 
+      if (genome[which] == 0): 
         genome[which] = 1
       else: 
         genome[which] = 0
       mutations=1.0
       
   else:
-    if genome[which] == 0: 
+    if (genome[which] == 0): 
       genome[which] = 1
     else: 
       genome[which] = 0
@@ -68,18 +69,20 @@ def CrossoverDeGabil(genome, **args):
     sister.resetStats()
     sister[cuts[0]*tamReglas+restos[0]:cuts[1]*tamReglas+restos[1]] = \
       gDad[cuts2[0]*tamReglas+restos[0]:cuts2[1]*tamReglas+restos[1]]
+    sister.stringLength = len(sister.genomeString)
 
   if args["count"] == 2:
     brother = gDad.clone()
     brother.resetStats()
     brother[cuts2[0]*tamReglas+restos[0]:cuts2[1]*tamReglas+restos[1]] = \
       gMom[cuts[0]*tamReglas+restos[0]:cuts[1]*tamReglas+restos[1]]
-
+    brother.stringLength = len(brother.genomeString)
+    
   return (sister, brother)
 
 
 #Variable que tendra los casos procesados de las iris  
-casos = procesardor.procesar()
+casos = procesador.procesar()
 
 
 
@@ -115,4 +118,4 @@ def FitnessGabil(genome):
 
   return (score*score)/float(tam)
 
-print FitnessGabil([0,1,1,1,1,1,1,1,1,1,1,1,1,1])
+
