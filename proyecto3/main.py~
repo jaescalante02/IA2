@@ -7,7 +7,7 @@ import operaciones
 # Genome instance
 genome = G1DBinaryString.G1DBinaryString(70)
 
-genome.evaluator.set(operaciones.FitnessDividido)
+genome.evaluator.set(operaciones.FitnessGabil)
 genome.mutator.set(operaciones.MutacionDeGabil)
 genome.crossover.set(operaciones.CrossoverDeGabil)
 
@@ -26,4 +26,4 @@ ga.evolve(10)
 #ga.setPopulationSize(80)
 
 # Best individual
-print operaciones.FitnessDividido(ga.bestIndividual())
+print ga.bestIndividual()
