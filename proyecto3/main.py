@@ -5,7 +5,7 @@ from pyevolve import Initializators, Mutators
 import operaciones
 
 # Genome instance
-genome = G1DBinaryString.G1DBinaryString(70)
+genome = G1DBinaryString.G1DBinaryString(65)
 
 genome.evaluator.set(operaciones.FitnessDividido)
 genome.mutator.set(operaciones.MutacionDeGabil)
@@ -14,7 +14,7 @@ genome.crossover.set(operaciones.CrossoverDeGabil)
 # Genetic Algorithm Instance
 ga = GSimpleGA.GSimpleGA(genome)
 ga.selector.set(Selectors.GRouletteWheel)
-ga.nGenerations = 200
+ga.nGenerations = 300
 
 # Do the evolution
 ga.evolve(10)

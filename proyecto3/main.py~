@@ -5,9 +5,9 @@ from pyevolve import Initializators, Mutators
 import operaciones
 
 # Genome instance
-genome = G1DBinaryString.G1DBinaryString(70)
+genome = G1DBinaryString.G1DBinaryString(65)
 
-genome.evaluator.set(operaciones.FitnessGabil)
+genome.evaluator.set(operaciones.FitnessDividido)
 genome.mutator.set(operaciones.MutacionDeGabil)
 genome.crossover.set(operaciones.CrossoverDeGabil)
 

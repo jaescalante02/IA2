@@ -1,1 +1,1 @@
-tamanioReglas = 14
+tamanioReglas = 13
