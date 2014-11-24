@@ -52,7 +52,10 @@ def campo4(valor):
     return 2
   return 3
 
-  
+#Dependiendo del tipo de iris, esta funcion retorna la clase a la que pertenece
+#   1 si es Setosa
+#   2 si es Versicolor
+#   3 si es Virginica
 def campo5(nombre):
   if(nombre=="Iris-setosa\n"):
     return 1
@@ -60,16 +63,28 @@ def campo5(nombre):
     return 2
   return 3
   
-  
+
+#Funcion encargada de leer los datos de los archivos pasados como argumentos
+
 def procesar():
-  if(len(sys.argv) != 2):
+  if(len(sys.argv) != 9):
     print "Uso:"
-    print "./procesador.py <archivo_de_datos_de_iris>"
+    print "./procesador.py <archivo_de_prueba_de_iris> <tasa_de_crossover> \
+<tasa_de_mutacion> <numero_de_generaciones> <tamanio_de_la_poblacion> \
+<tipo_de_fitness> <tipo_de_seleccion> <archivo_de_ejemplos>"
+    print "El tipo de fitness puede ser 1 (para fitness de gabil), o 2 (para \
+fitness de gabil con penalizacion)"
+    print "El tipo de seleccion puede ser:"
+    print "\t1 para seleccion por ruleta"
+    print "\t2 para seleccion por rango"
+    print "\t3 para seleccion por torneo"    
+    print "\t4 para seleccion por uniforme"
     exit(0)
 
   entrada = open(sys.argv[1],'r')
-  
+  entrada2 = open(sys.argv[8],'r')
   datos = []
+  datos2 = []
   for data in entrada:
       data = data.split(',')
       #print data
@@ -77,6 +92,14 @@ def procesar():
       campo3(float(data[2])),campo4(float(data[3])),\
       campo5(data[4])])
 
-  return datos
+  for data in entrada2:
+      data = data.split(',')
+      #print data
+      datos2.append([campo1(float(data[0])),campo2(float(data[1])),\
+      campo3(float(data[2])),campo4(float(data[3])),\
+      campo5(data[4])])
+
+
+  return [datos2,datos]
   
 # print procesar()

@@ -1,35 +1,64 @@
+#Modulo main que se encarga de llamar al algoritmo genetico e imprime
+#todos los datos referentes al a corrida del algoritmo
+#Creado por:
+#     Juan Escalante
+#     Wilmer Bandres
 from pyevolve import GSimpleGA
 from pyevolve import G1DBinaryString
 from pyevolve import Selectors
 from pyevolve import Initializators, Mutators
 import operaciones
+import sys 
+import math
 
 # Genome instance
 genome = G1DBinaryString.G1DBinaryString(65)
 
-genome.evaluator.set(operaciones.FitnessDividido) #Mejor fit
-#genome.evaluator.set(operaciones.FitnessGabil) # 2do mejor fit
+if(int(sys.argv[6])==1):
+  genome.evaluator.set(operaciones.FitnessGabil)
+else:
+  genome.evaluator.set(operaciones.FitnessDividido) 
+  
 genome.mutator.set(operaciones.MutacionDeGabil)
 genome.crossover.set(operaciones.CrossoverDeGabil)
 
 # Genetic Algorithm Instance
+opc = int(sys.argv[7])
 ga = GSimpleGA.GSimpleGA(genome)
-#ga.selector.set(Selectors.GRouletteWheel) #<- 3er mejor
-#ga.selector.set(Selectors.GRankSelector) # <- gual al de arriba
-ga.selector.set(Selectors.GTournamentSelector) #<- mejor
-#ga.selector.set(Selectors.GUniformSelector) #<- 2do mejor
 
-ga.nGenerations = 200
+if(opc==1):
+  ga.selector.set(Selectors.GRouletteWheel) #<- 3er mejor
+if(opc==2):
+  ga.selector.set(Selectors.GRankSelector) # <- igual de bueno al de arriba
+if(opc==3):
+  ga.selector.set(Selectors.GTournamentSelector) #<- mejor
+if(opc==4):  
+  ga.selector.set(Selectors.GUniformSelector) #<- 2do mejor
+
+ga.nGenerations = int(sys.argv[4])
 
 #Parametros del algoritmo
-ga.setCrossoverRate(0.80)
-ga.setMutationRate(0.015)
-#ga.setPopulationSize(80)
+ga.setCrossoverRate(float(sys.argv[2]))
+ga.setMutationRate(float(sys.argv[3]))
+ga.setPopulationSize(int(sys.argv[5]))
 
 # Do the evolution
-ga.evolve(10)
+ga.evolve(5)
+
 
 
 # Best individual
-print ga.bestIndividual()
-print operaciones.FitnessDividido(ga.bestIndividual())
+mejor = ga.bestIndividual()
+print ""
+print "El mejor individuo es:"
+print mejor.getBinary()
+print "Y logro clasificar bien: ",
+
+operaciones.casos = operaciones.casos2
+
+
+if(int(sys.argv[6])==1):
+  print int(math.sqrt(operaciones.FitnessGabil(mejor))),
+else:
+  print int(math.sqrt(operaciones.FitnessDividido(mejor)*len(mejor))),
+print " individuos"

@@ -1,4 +1,6 @@
 #Modulo de operaciones de Gabil basado en pyevolve
+#En este modulo se imeplemtan todas las funciones referentes a los algoritmos
+#geneticos
 #Creado por:
 #     Juan Escalante
 #     Wilmer Bandres
@@ -82,7 +84,7 @@ def CrossoverDeGabil(genome, **args):
 
 
 #Variable que tendra los casos procesados de las iris  
-casos = procesador.procesar()
+[casos,casos2] = procesador.procesar()
 
 
 
