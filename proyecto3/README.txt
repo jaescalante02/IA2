@@ -49,3 +49,7 @@ donde:
 
 <archivo_de_ejemplos_de_iris> que indica el archivo con los datos (ejemplos) 
                               de iris con el que se va a entrenar
+                              
+Ejemplo de corrida:
+
+  python main.py iris/iris.data 0.80 0.015 100 100 2 3 iris/iris_ejemplos.data
