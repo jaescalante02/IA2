@@ -69,9 +69,9 @@ def campo5(nombre):
 def procesar():
   if(len(sys.argv) != 9):
     print "Uso:"
-    print "./procesador.py <archivo_de_prueba_de_iris> <tasa_de_crossover> \
+    print "python main.py <archivo_de_prueba_de_iris> <tasa_de_crossover> \
 <tasa_de_mutacion> <numero_de_generaciones> <tamanio_de_la_poblacion> \
-<tipo_de_fitness> <tipo_de_seleccion> <archivo_de_ejemplos>"
+<tipo_de_fitness> <tipo_de_seleccion> <archivo_de_ejemplos_de_iris>"
     print "El tipo de fitness puede ser 1 (para fitness de gabil), o 2 (para \
 fitness de gabil con penalizacion)"
     print "El tipo de seleccion puede ser:"

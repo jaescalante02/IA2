@@ -1,0 +1,51 @@
+Proyecto realizado por:
+Juan Andres Escalante   10-10227
+Wilmer Bandres          10-10055
+
+Se utilizo el framework pyevolve para la implementacion del algoritmo genetico 
+de este proyecto.
+
+Se implemento un modulo de operaciones de crossover, mutacion y funcion de 
+fitness, en el archivo operaciones.py.
+
+En el archivo main.py se manda a correr todo el proyecto (el algoritmo genetico).
+
+En el archivo procesador.py se implemento una funcion que procesa la informacion
+de los archivos de datos de iris.
+
+Para correr el programa se debe ejecutar la linea:
+
+python main.py <archivo_de_prueba_de_iris> <tasa_de_crossover> <tasa_de_mutacion> <numero_de_generaciones> <tamanio_de_la_poblacion> <tipo_de_fitness> <tipo_de_seleccion> <archivo_de_ejemplos_de_iris>
+
+donde: 
+
+<archivo_de_prueba_de_iris> es el archivo de casos de prueba.
+
+<tasa_de_crossover> es la tasa de crossover para el algoritmo genetico, es un valor
+                    entre 0.0 y 1.0 que indica el porcentaje. 
+                    Ejemplos: el valor 0.80 es 80%
+                              el valor 0.56 es 56%
+                              
+<tasa_de_mutacion>  es la tasa de mutacion para el algoritmo genetico, es un valor
+                    entre 0.0 y 1.0 que indica el porcentaje. 
+                    Ejemplo: el valor 0.015 es 1.5%
+
+<numero_de_generaciones> es un numero que indica el numero de generaciones que 
+                         durara el algoritmo genetico
+                         
+<tamanio_de_la_poblacion> indica el tamanio de la poblacion que tendra cada 
+                          generacion
+                          
+<tipo_de_fitness> es un valor entre 1 y 2 que indica:
+                      1 (para fitness de gabil)
+                      2 (para fitness de gabil con penalizacion)
+                      
+<tipo_de_seleccion> que es un valor entre 1 y 4 que indica:
+	                    1 para seleccion por ruleta
+	                    2 para seleccion por rango
+	                    3 para seleccion por torneo
+	                    4 para seleccion por uniforme
+
+
+<archivo_de_ejemplos_de_iris> que indica el archivo con los datos de iris con 
+                              el que se va a entrenar

@@ -52,6 +52,7 @@ mejor = ga.bestIndividual()
 print ""
 print "El mejor individuo es:"
 print mejor.getBinary()
+print ""
 print "Y logro clasificar bien: ",
 
 operaciones.casos = operaciones.casos2

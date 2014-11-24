@@ -43,7 +43,7 @@ ga.setMutationRate(float(sys.argv[3]))
 ga.setPopulationSize(int(sys.argv[5]))
 
 # Do the evolution
-ga.evolve(10)
+ga.evolve(5)
 
 
 
