@@ -1,0 +1,112 @@
+Cantidad de aciertos en las 10 corridas (sobre un total de 150 ejemplos),
+para una corrida con parametros de:
+
+crossover rate 90%, mutation rate 1%
+98
+142 					
+142
+142
+100
+142
+142
+142
+142
+97
+
+crossover rate 90%, mutation rate 1.5%
+100
+142
+99
+141
+100
+142
+142
+142
+100
+142
+
+crossover rate 90%, mutation rate 1.5%
+142
+142
+99
+100
+142
+142
+99
+100
+142					
+142
+
+crossover rate 80%, mutation rate 1%
+142
+142
+142
+99
+142
+142
+142
+142
+142
+100
+
+crossover rate 80%, mutation rate 1.5%
+142
+142
+142
+142
+142					
+142					
+142
+142
+142
+138
+
+
+crossover rate 80%, mutation rate 0.5%
+142
+99
+142
+142
+100
+142
+142
+142
+142
+142
+
+
+crossover rate 65%, mutation rate 1%
+138				
+142
+142
+99
+142
+99
+142
+142
+99
+142
+
+crossover rate 65%, mutation rate 1.5%
+97
+142
+142
+98
+142
+142
+142
+142
+138
+142
+
+crossover rate 65%, mutation rate 0.5%
+142
+142
+98
+98
+98
+97
+142
+142
+98
+142

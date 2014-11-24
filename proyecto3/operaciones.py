@@ -96,7 +96,7 @@ def FitnessGabil(genome):
   tamRegla = MiConstantes.tamanioReglas
   
   # Itero sobre los bits de la regla
-
+  
   for caso in casos:
     ya = 0
     for x in range(0,tam/tamRegla):
@@ -131,36 +131,5 @@ def FitnessGabil(genome):
 def FitnessDividido(genome):
   score = 0.0
   tam = len(genome)  
-  tamRegla = MiConstantes.tamanioReglas
-  
-  # Itero sobre los bits de la regla
-  for caso in casos:
-    ya = 0
-    for x in range(0,tam/tamRegla):
-       regla = x*tamRegla
-       
-         
-       if(genome[regla+caso[0]-1]==0):
-        continue
-       if(genome[regla+3+caso[1]-1]==0):
-        continue
-       if(genome[regla+5+caso[2]-1]==0):
-        continue
-       if(genome[regla+8+caso[3]-1]==0):
-        continue
-       val = 0
-       if(genome[regla+11]==1):
-        val = 2
-        
-       if(genome[regla+12]==1):
-        val = val+1
-       
-       
-       
-       if(ya==0):
-        if(val==caso[4]):
-          score+=1.0
-       ya = 1
-    
-    
-  return (score*score)/float(tam)
+
+  return FitnessGabil(genome)/float(tam)

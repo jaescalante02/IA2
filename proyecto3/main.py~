@@ -7,23 +7,29 @@ import operaciones
 # Genome instance
 genome = G1DBinaryString.G1DBinaryString(65)
 
-genome.evaluator.set(operaciones.FitnessDividido)
+genome.evaluator.set(operaciones.FitnessDividido) #Mejor fit
+#genome.evaluator.set(operaciones.FitnessGabil) # 2do mejor fit
 genome.mutator.set(operaciones.MutacionDeGabil)
 genome.crossover.set(operaciones.CrossoverDeGabil)
 
 # Genetic Algorithm Instance
 ga = GSimpleGA.GSimpleGA(genome)
-ga.selector.set(Selectors.GRouletteWheel)
+#ga.selector.set(Selectors.GRouletteWheel) #<- 3er mejor
+#ga.selector.set(Selectors.GRankSelector) # <- gual al de arriba
+ga.selector.set(Selectors.GTournamentSelector) #<- mejor
+#ga.selector.set(Selectors.GUniformSelector) #<- 2do mejor
+
 ga.nGenerations = 200
+
+#Parametros del algoritmo
+ga.setCrossoverRate(0.65)
+ga.setMutationRate(0.015)
+#ga.setPopulationSize(80)
 
 # Do the evolution
 ga.evolve(10)
 
 
-#Parametros del algoritmo
-#ga.setCrossoverRate(1.0)
-#ga.setMutationRate(0.03)
-#ga.setPopulationSize(80)
-
 # Best individual
 print ga.bestIndividual()
+print operaciones.FitnessDividido(ga.bestIndividual())
