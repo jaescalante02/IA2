@@ -2,6 +2,9 @@
 import sys
 import datetime
 
+training = False if (sys.argv[1]=='0') else True
+
+
 def read_file(filename):
 
   with open(filename) as f:
@@ -14,7 +17,7 @@ def read_file(filename):
 
         
   return dic, first      
-        
+         
 def completar(fday, datos):
 
   i=0
@@ -53,9 +56,9 @@ def operar(datos):
     new_datos.append(n)    
   return new_datos      
 
-def imprimir(fname, datos, num):
+def imprimir(fname, outname, datos, num):
 
-  fp = open("datos_completos/"+fname+str(num-1)+".txt", 'w+')
+  fp = open('datos_completos/'outname+str(num-1), 'w+')
   i=num-1
   for x in datos[num-1:]:
     for a in datos[i-num+1:i]:
@@ -70,20 +73,22 @@ def imprimir(fname, datos, num):
           fp.write(str(round(c, 3)))
         else:  
           fp.write(str(c))
-        fp.write(' ')            
+        fp.write(' ')
+    if(training):
+      fp.write(str(datos[i][6]))
     fp.write('\n')
     i+=1
   fp.close()              
   
 
-fname = sys.argv[2]
-comb = int(sys.argv[1])        
+fname = sys.argv[3]
+comb = int(sys.argv[2])        
 datos, first_day = read_file(fname)        
 datos = completar(first_day, datos)
 print len(datos), 'datos'
 datos=operar(datos)
 for i in list(range(2, comb+1)):
-  imprimir(fname, datos, i)
+  imprimir(fname, sys.argv[4], datos, i)
 
 
         
