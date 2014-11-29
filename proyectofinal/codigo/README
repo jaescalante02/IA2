@@ -1,0 +1,48 @@
+Proyecto final hecho por:
+
+Wilmer Bandres 10-10055
+Juan Escalante 10-10227
+
+El modo de uso de cada uno de los ejecutables se presentan a continuacion:
+
+Para compilar todo simplemente haga el comando:
+
+	make
+
+
+
+**El ejecutable que se llama red_iris y ejecuta la red que clasificara los datos
+  se ejecuta de la siguiente manera
+  
+   ./red_iris <tasa_de_aprendizaje> <archivo_de_casos_de_entrenamiento> 
+         <numero_de_neuronas_de_capa_intermedia>
+         <numero_de_entradas_por_neurona_de_capa_intermedia>
+         <archivo_de_salida_errores> <archivo_de_pruebas_a_clasificar> 
+         <archivo_de_salida_clasificado> 
+   
+
+donde cada uno de los parametros se refiere a 
+   <tasa_de_aprendizaje> : la tasa de aprendizaje de la red
+   
+   <archivo_de_casos_de_entrenamiento> : el archivo que contiene el 
+                                         entrenamiento para la red
+                                         
+   <numero_de_neuronas_de_capa_intermedia>: es el numero de neuronas que se desea 
+                                            que esten en la capa intermedia
+                                            
+   <numero_de_entradas_por_neurona_de_capa_intermedia> : es el numero de entradas
+                                                 por neurona de la capa intermedia,
+                                                 que en este ejercicio debe ser 2
+                                                 
+   <archivo_de_salida_errores> : es el archivo donde se imprimiran los datos
+                                 de iteracion-error
+                                 
+   <archivo_de_pruebas_a_clasificar>: es el archivo que contiene instancias no 
+                                      no clasificadas del problema y que se desean
+                                      clasificar
+   
+   <archivo_de_salida_clasificado>: es el archivo donde se desea que impriman 
+                                    la clasificacion de las instancias del archivo
+                                    de pruebas a clasificar
+
+    
