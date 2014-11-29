@@ -1,4 +1,4 @@
-Proyecto hecho por:
+Proyecto final hecho por:
 
 Wilmer Bandres 10-10055
 Juan Escalante 10-10227
@@ -10,18 +10,18 @@ Para compilar todo simplemente haga el comando:
 	make
 
 
-Al hacer make, aparecen 3 ejecutables.
 
-***El primero se llama red que es referente al ejercicio de los puntos dentro del
-circulo, se ejecuta de la siguiente manera
-
-   ./red <tasa_de_aprendizaje> <archivo_de_casos_de_entrenamiento> 
+**El ejecutable que se llama red_iris y ejecuta la red que clasificara los datos
+  se ejecuta de la siguiente manera
+  
+   ./red_iris <tasa_de_aprendizaje> <archivo_de_casos_de_entrenamiento> 
          <numero_de_neuronas_de_capa_intermedia>
          <numero_de_entradas_por_neurona_de_capa_intermedia>
          <archivo_de_salida_errores> <archivo_de_pruebas_a_clasificar> 
          <archivo_de_salida_clasificado> 
-         
-   donde cada uno de los parametros se refiere a 
+   
+
+donde cada uno de los parametros se refiere a 
    <tasa_de_aprendizaje> : la tasa de aprendizaje de la red
    
    <archivo_de_casos_de_entrenamiento> : el archivo que contiene el 
@@ -44,33 +44,5 @@ circulo, se ejecuta de la siguiente manera
    <archivo_de_salida_clasificado>: es el archivo donde se desea que impriman 
                                     la clasificacion de las instancias del archivo
                                     de pruebas a clasificar
-   
 
-**El segundo ejecutable de llama red_iris y es referente al primer ejercicio de la
-  tercera parte del proyecto, donde hay que separar a las iris setosas de las demas
-  se ejecuta de la siguiente manera
-  
-   ./red_iris <tasa_de_aprendizaje> <archivo_de_casos_de_entrenamiento> 
-         <numero_de_neuronas_de_capa_intermedia>
-         <numero_de_entradas_por_neurona_de_capa_intermedia>
-         <archivo_de_salida_errores> <archivo_de_pruebas_a_clasificar> 
-         <archivo_de_salida_clasificado> 
-         
-    Los parametros son similares al caso anterior
-    En este caso el <numero_de_entradas_por_neurona_de_capa_intemedia> debe ser 4,
-    ya que cada iris posee 4 caracteristicas
-    
-**El tercer ejecutable de llama red_iris_n_clases y es referente al segundo ejercicio de la
-  tercera parte del proyecto, donde hay que separar los 3 tipos de iris, y se 
-  ejecuta de la siguiente manera
-  
-   ./red_iris_n_clases <tasa_de_aprendizaje> <archivo_de_casos_de_entrenamiento> 
-         <numero_de_neuronas_de_capa_intermedia>
-         <numero_de_entradas_por_neurona_de_capa_intermedia>
-         <archivo_de_salida_errores> <archivo_de_pruebas_a_clasificar> 
-         <archivo_de_salida_clasificado> 
-         
-    Los parametros son similares al caso anterior
-    En este caso el <numero_de_entradas_por_neurona_de_capa_intemedia> debe ser 4,
-    ya que cada iris posee 4 caracteristicas
     

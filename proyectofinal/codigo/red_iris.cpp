@@ -51,15 +51,23 @@ void leer(){
 
     caso.resize(n+1);
     char tipo[40];
-    while(fscanf(arch,"%lf,%lf,%lf,%lf,%s",&caso[1],&caso[2],&caso[3],&caso[4],tipo)!=EOF){
-//      fscanf("%lf,%lf,%lf,%s"",&caso[1],&caso[2],&caso[3],&caso[4],tipo);
+    while(fscanf(arch,"%lf",&caso[1])!=EOF){
+        int clas;
+      
       caso[0]=1.0;
-      //printf("%lf %lf %lf %lf %s\n",caso[1],caso[2],caso[3],caso[4],tipo);
-      if(tipo[5]=='s')
+      for(int i=2;i<n+1;i++){
+        fscanf(arch,"%lf",&caso[i]);
+      }
+      clas = fscanf(arch,"%d",&clas);
+      
+      if(clas==1)
   	    respuestas.push_back(1),respuestas2.push_back(0);
   	  else 
   	    respuestas.push_back(0),respuestas2.push_back(1);
-  	    
+  	  for(int i=0;i<n+1;i++){
+        printf("%lf ",caso[i]);
+      } 
+      printf("\n");
 
       casos.push_back(caso);
     }
@@ -68,14 +76,13 @@ void leer(){
 void leer2(){
 
     caso_prueba.resize(n+1);
-    while(fscanf(pruebas,"%lf,%lf,%lf,%lf",&caso_prueba[1],&caso_prueba[2],&caso_prueba[3],&caso_prueba[4])!=EOF){
+    while(fscanf(pruebas,"%lf",&caso_prueba[1])!=EOF){
       caso_prueba[0]=1.0;
-//      for(int i=1;i<=4;i++) cout << caso_prueba[i] << " ";
- //     cout << endl;
-      // de leer los numeros i de este caso
-     // for(int i =0;i<n-1;i++) fscanf(pruebas,"%lf",&caso_prueba[i+2]);
-	    //for(int i=0;i<3;i++) cout << caso_prueba[i]<< " ";
-	    //cout << endl;
+      
+      for(int i=2;i<n+1;i++){
+        fscanf(arch,"%lf",&caso_prueba[i]);
+      }
+
       casos_prueba.push_back(caso_prueba);
     }
 }
@@ -221,9 +228,9 @@ int main(int argc, char *args[]){
 		  if(o2>o) resp=2;
 		  else resp=1;
 		  if(resp==1)
-	          fprintf(salida_pruebas,"Iris setosa\n");
+	          fprintf(salida_pruebas,"Aumenta\n");
 		  else
-			  fprintf(salida_pruebas,"No es iris setosa\n");
+			  fprintf(salida_pruebas,"Baja\n");
 
     }
 
