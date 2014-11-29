@@ -6,14 +6,36 @@ def read_file(filename):
 
   with open(filename) as f:
     aux = [str(x) for x in f.readline().split()]
-    array = []
+    dic = {}
     for line in f: # read rest of lines
         s=line.split()
-        array2=[s[0]] + [float(x) for x in s[1:]]
-        array.append(array2)
+        dic[datetime.datetime.strptime(s[0], "%d/%m/%y").date().strftime("%d/%m/%y")] = [float(x) for x in s[1:]]
+    first = datetime.datetime.strptime(s[0], "%d/%m/%y").date().strftime("%d/%m/%y")
+
         
-  return array[::-1]      
+  return dic, first      
         
+def completar(fday, datos):
+
+  i=0
+  tam = len(datos)
+  day=datetime.datetime.strptime(fday, "%d/%m/%y").date()
+  new_datos=[]
+  while(i<tam):
+    str_date = day.strftime("%d/%m/%y")
+    if(str_date in datos):
+      new_datos.append([str_date] + datos[str_date]) 
+      i+=1   
+      day += datetime.timedelta(days=1)      
+    else:
+      while(str_date not in datos):
+        new_datos.append([str_date] + [0.0, 0.0, 0.0, 0.0, 0])        
+        day += datetime.timedelta(days=1) 
+        str_date = day.strftime("%d/%m/%y") 
+      
+        
+  return new_datos
+  
  
 def operar(datos):
 
@@ -48,16 +70,16 @@ def imprimir(fname, datos, num):
           fp.write(str(round(c, 3)))
         else:  
           fp.write(str(c))
-        fp.write(' ')
-    fp.write(str(datos[i][6]))
+        fp.write(' ')            
     fp.write('\n')
     i+=1
-  fp.close()               
+  fp.close()              
   
 
 fname = sys.argv[2]
-comb = int(sys.argv[1])          
-datos = read_file(fname)        
+comb = int(sys.argv[1])        
+datos, first_day = read_file(fname)        
+datos = completar(first_day, datos)
 print len(datos), 'datos'
 datos=operar(datos)
 for i in list(range(2, comb+1)):
@@ -65,12 +87,3 @@ for i in list(range(2, comb+1)):
 
 
         
-        
-        
-        
-      
-
-
-
-
-

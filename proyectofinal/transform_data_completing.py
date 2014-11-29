@@ -46,25 +46,32 @@ def operar(datos):
     n.append(d.day)
     n.append(d.month)    
     n.append(d.weekday())
-    n.append(x[1]-x[5])
-    n.append(x[2]-x[5])
-    n.append(x[4]-x[5])
+    n.append(x[1]-x[2])
+    n.append(x[4]-x[2])
+    n.append(x[5]-x[2])
     n.append(0 if (x[3]<0) else 1)    
     new_datos.append(n)    
   return new_datos      
 
 def imprimir(fname, datos, num):
 
-  fp = open("datos_completos/"+fname+str(num)+".txt", 'w+')
-  i=0
-  for x in datos:
-    for a in datos[i:i+num]:
-      for b in a:
+  fp = open("datos_completos/"+fname+str(num-1)+".txt", 'w+')
+  i=num-1
+  for x in datos[num-1:]:
+    for a in datos[i-num+1:i]:
+      for b in a[3:]:
         if(isinstance(b, float)):
           fp.write(str(round(b, 3)))
         else:  
           fp.write(str(b))
+        fp.write(' ')  
+    for c in datos[i][:3]: 
+        if(isinstance(c, float)):
+          fp.write(str(round(c, 3)))
+        else:  
+          fp.write(str(c))
         fp.write(' ')
+    fp.write(str(datos[i][6]))
     fp.write('\n')
     i+=1
   fp.close()              
@@ -76,7 +83,7 @@ datos, first_day = read_file(fname)
 datos = completar(first_day, datos)
 print len(datos), 'datos'
 datos=operar(datos)
-for i in list(range(1, comb+1)):
+for i in list(range(2, comb+1)):
   imprimir(fname, datos, i)
 
 
