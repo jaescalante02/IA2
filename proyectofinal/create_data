@@ -1,0 +1,10 @@
+#! /bin/bash
+
+sed -i 's/,/\./g' $1
+sed -i 's/%/ /g' $1
+rm -rf datos datos_completos
+mkdir datos
+mkdir datos_completos
+mkdir datos/empresas
+mkdir datos_completos/empresas
+
