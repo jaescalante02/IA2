@@ -31,7 +31,7 @@ int n;
 //Representa el numero de neuronas en la capa intermedia
 int neuronas;
 
-const int max_iter = 50000;
+const int max_iter = 2000;
 
 vector<int> respuestas,respuestas2;
 //vector que representa un caso dado por el archivo de casos
@@ -58,17 +58,18 @@ void leer(){
       for(int i=2;i<n+1;i++){
         fscanf(arch,"%lf",&caso[i]);
       }
-      clas = fscanf(arch,"%d",&clas);
+      fscanf(arch,"%d",&clas);
       
       if(clas)
   	    respuestas.push_back(1),respuestas2.push_back(0);
   	  else 
   	    respuestas.push_back(0),respuestas2.push_back(1);
-  	  for(int i=0;i<n+1;i++){
+  	  //printf("%d\n",respuestas[respuestas.size()-1]);
+  	  /*for(int i=0;i<n+1;i++){
         printf("%lf ",caso[i]);
       } 
       printf("\n");
-
+      */
       casos.push_back(caso);
     }
 }
@@ -80,9 +81,15 @@ void leer2(){
       caso_prueba[0]=1.0;
       
       for(int i=2;i<n+1;i++){
-        fscanf(arch,"%lf",&caso_prueba[i]);
+//        printf("hola\n");
+        fscanf(pruebas,"%lf",&caso_prueba[i]);
       }
-
+      /*
+      for(int i=0;i<n+1;i++){
+        printf("%lf ",caso_prueba[i]);
+      } 
+      printf("\n");
+      */
       casos_prueba.push_back(caso_prueba);
     }
 }
@@ -222,7 +229,7 @@ int main(int argc, char *args[]){
           //calculo como evalua la red este caso
           double o = sigmoidal(vec.mult(outs));
           double o2= sigmoidal(vec2.mult(outs));
-          //cout << o << " " << o2 << " " << o3 <<endl;
+        //  cout << o << " " << o2  <<endl;
           
 
 		  if(o2>o) resp=2;
