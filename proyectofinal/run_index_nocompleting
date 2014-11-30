@@ -1,0 +1,20 @@
+#! /bin/bash
+
+./create_data empresas/$1.csv
+python transform_data.py 1 32 empresas/$1.csv train_$1.txt
+python transform_data.py 0 32 empresas/$1.csv casos_$1.txt
+
+num=7
+while read c3
+do
+
+echo "./codigo/red_iris 0.001 ./datos/t$c3.txt 10 $num errores.txt ./datos/c$c3.txt ./datos/r$c3.txt"
+
+head -2000 ./datos/train_$1.txt$c3 > datos/t$c3.txt
+tail -500 ./datos/casos_$1.txt$c3 > datos/c$c3.txt
+./codigo/red_iris 0.001 ./datos/t$c3.txt 10 $num errores.txt ./datos/c$c3.txt ./datos/r$c3.txt
+num=$[num+4]
+
+done < numeros.txt
+
+mv datos/ nc_$1/

@@ -1,4 +1,6 @@
 
+import sys
+
 def read_file(filename):
 
   with open(filename) as f:
@@ -9,14 +11,14 @@ def read_file(filename):
         
   return array
   
-a=read_file('datos_completos/votacion.txt')     
+a=read_file(sys.argv[2])     
 
 b=[]
 for i in a:
    b.append(sum(i))
 
 for i in b:
-  if(i>3):
+  if(i>=int(sys.argv[1])):
     print 1
   else:
     print 0   

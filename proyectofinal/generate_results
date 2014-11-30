@@ -1,0 +1,34 @@
+#! /bin/bash
+
+touch $1cresult.txt
+
+while read num
+do
+
+correctos=`paste -d ' ' $1correcta/rcorrectas.txt $1r$num.txt | grep -e '0 0\|1 1' | wc -l`
+echo "$num $correctos" >> $1cresult.txt
+
+
+done < numeros.txt
+
+mkdir $1votacion
+
+paste -d ' ' $1r* > $1votacion.txt
+
+while read num
+do
+
+python sum.py $num $1votacion.txt > $1votacion/rv$num.txt
+
+done < numeros.txt
+
+touch $1votacion/cresult.txt
+
+while read num
+do
+
+correctos=`paste -d ' ' $1correcta/rcorrectas.txt $1votacion/rv$num.txt | grep -e '0 0\|1 1' | wc -l`
+echo "$num $correctos" >> $1votacion/cresult.txt
+
+
+done < numeros.txt
