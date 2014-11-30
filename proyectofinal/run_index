@@ -15,7 +15,7 @@ echo "./codigo/red_iris 0.001 ./datos_completos/t$c3.txt 10 $num errores.txt ./d
 head -5000 ./datos_completos/train_$1.txt$c3 > datos_completos/t$c3.txt 
 tail -750  ./datos_completos/casos_$1.txt$c3 > datos_completos/c$c3.txt
 
-#./codigo/red_iris 0.001 ./datos_completos/t$c3.txt 10 $num errores.txt ./datos_completos/c$c3.txt ./datos_completos/r$c3.txt
+./codigo/red_iris 0.001 ./datos_completos/t$c3.txt 10 $num errores.txt ./datos_completos/c$c3.txt ./datos_completos/r$c3.txt
 num=$[num+4]
 
 
