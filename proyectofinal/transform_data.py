@@ -2,7 +2,7 @@
 import sys
 import datetime
 
-training = False if (sys.argv[1]=='1') else True
+training = False if (sys.argv[1]=='0') else True
 
 def read_file(filename):
 

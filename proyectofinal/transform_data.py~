@@ -2,7 +2,7 @@
 import sys
 import datetime
 
-training = False if (sys.argv[1]=='0') else True
+training = False if (sys.argv[1]=='1') else True
 
 def read_file(filename):
 
@@ -64,7 +64,7 @@ datos = read_file(fname)
 print len(datos), 'datos'
 datos=operar(datos)
 for i in list(range(2, comb+1)):
-  imprimir(fname, datos, i)
+  imprimir(fname, sys.argv[4], datos, i)
 
 
         
